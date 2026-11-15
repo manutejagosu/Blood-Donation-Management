@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Contact us</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<style>
+.Donate{
+font-size:38px;
+}
+body{
+background-image:url("blood.jpg");
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center;
+}
+.logo{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid black;
+}
+h1{
+text-align:center;
+color:#ec407a;
+font-size:40px;
+margin-bottom:20px;
+margin-top:20px;
+margin-right:9o0px;
+}
+a{
+margin-left:580px;
+}
+.back-btn{
+margin-left:1px;
+background:#2196F3;
+    color:white;
+    padding:10px 25px;
+    border:none;
+    border-radius:25px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+width:190px;
+height:50px;
+margin-top:20px;
+background:linear-gradient(to right,#00c6ff,#8e2de2,#ff4b8b);
+}
+.back-btn:hover{
+background:linear-gradient(to right,#89f7fe,#66a6ff);
+color:black;
+}
+.id{
+background:#2196F3;
+    color:white;
+    padding:10px 25px;
+    border:none;
+    border-radius:25px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+width:190px;
+height:50px;
+border-radius:40px;
+background:linear-gradient(to right,#00c6ff,#8e2de2,#ff4b8b);
+font-size:20px;
+}
+p,p1,p2{
+font-size:25px;
+color:#006d77;
+margin-bottom:20px;
+}
+.id:hover{
+background:linear-gradient(to right,#89f7fe,#66a6ff);
+color:black;
+}
+p{
+font-family:'Trebuchet MS',sans-serif;
+margin-bottom:10px;
+}
+p1{
+margin-left:462px;
+margin-bottom:20px;
+}
+p2{
+margin-left:462px;
+margin-bottom:20px;
+}
+h3{
+font-size:25px;
+color:#ec407a;
+margin-top:10px;
+margin-bottom:20px;
+}
+input,textarea{
+margin:2px 0;
+padding:4px;
+width:250px;
+font-size:20px;
+border-radius:20px;
+}
+input,textarea::placeholder{
+font-size:20px;
+}
+b{
+font-size:20px;
+margin-left:10px;
+margin-right:160px;
+}
+.admin-btn{
+    border:none;
+     color:red;
+     font-size:20px;
+margin-left:25px;
+    padding:10px 22px;
+    border-radius:25px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.admin-btn:hover{
+    background-color:#1565c0;
+    color:white;
+}
+</style>
+<body>
+<div class="header">
+<img src="m.png" alt="website logo" class="logo">
+<h1 class="Donate">Blood Donation</h1>
+<nav class="navigation">
+<a href="home.html">Home</a>
+<a href="about.html">About</a>
+<a href="donate.html">Donate</a>
+<a href="findblood.html">Find Blood</a>
+<a href="camps.html">Camps</a>
+<a href="contact.html">Contact</a>
+<button class="admin-btn" onclick="window.location.href='admin.html'">Admin</button>
+</nav> 
+</div>
+<h1>Contact us</h1>
+<p align="center" >
+If you need help or have any questions,feel free to contact us.</p>
+<h3 align="center">Contact Details</h3>
+<p align="center">
+&#128205;
+Address:City Blood Bank,Hyderabad,</p>
+<p1 align="center">
+&#128222;
+Phone:1800-456-789,<br></p1>
+<p2 align="center"> 
+&#128231;
+Email:bloodhelp2026@gmail.com.<br>
+</p2>
+<div class="form">
+<h3 align="center">Send Us a Message</h3>
+<form align="center" action="contact.php" method="POST">
+<div class="source">
+<b>Name:</b><br>
+<input type="text" name="name" placeholder="Enter your name" pattern="^[A-Za-z]+" title="Name should contain letters and space is allowed between words" required><br><br>
+<b>Phone:</b><br>
+<input type="tel" name="phone" placeholder="Enter phone number" pattern="[6-9]{1}[0-9]{9}" title="Please enter a valid 10-digit mobile number" maxlength="10" required><br><br>
+<b>Email:</b><br>
+<input type="email" name="email" placeholder="Enter your email" required><br><br>
+<b>Message:</b><br>
+<textarea rows="4" cols="30" name="message" placeholder="Write your message here... "required></textarea><br><br>
+<input type="submit" value="Send" class="id">
+</div>
+</form>
+<a href="home.html">
+<button class="back-btn" style="font-size :18px";>Back to Home</button>
+</a>
+</body>
+</html>

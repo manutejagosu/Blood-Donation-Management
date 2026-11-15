@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Become a Donor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<style>
+.Donate{
+font-size:38px;
+}
+body{
+font-family:Arial,verdana,sans-serif;
+background-image:url("blood.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center;
+background-attachment:fixed;
+margin:0;
+}
+b{
+text-align:center;
+font-size:18px;
+}
+a{
+margin-left:710px;
+margin-top:120px;
+}
+.back-btn{
+width:150px;
+height:50px;
+margin-right:120px;
+border-radius:24px;
+border:none;
+background-color:red;
+cursor:pointer;
+color:white;
+}
+.back-btn:hover{
+background:linear-gradient(45deg,#2563eb,#1e40af);
+color:white;
+}
+h2{
+color:#0d47a1;
+text-shadow:2px 1px 6px rgba(139,0,0,0.5);
+margin-top:28px;
+margin-left:320px;
+margin-right:150px;
+letter-spacing:0.5px;
+font-size:30px;
+}
+table{
+    margin:40px auto;
+    margin-left:auto;
+    margin-right:300px; 
+    background: rgba(255,255,255,0.9);
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0px 8px 20px rgba(0,0,0,0.3);
+    border-collapse: collapse;
+}
+
+td{
+padding:23px 25px;
+fontsize:25px;
+color:#333;
+}
+input{
+border-size:20px;
+font-size:20px;
+border-radius:8px;
+}
+.reg{
+width:100px;
+height:40px;
+border:none;
+border-radius:18px;
+padding 10px 20px;
+background-color:red;
+cursor:pointer;
+color:white;
+font-size:20px;
+}
+.reg:hover{
+background:linear-gradient(45deg,#2563eb,#1e40af);
+color:white;
+}
+.admin-btn{
+    border:none;
+     color:red;
+     font-size:20px;
+margin-left:25px;
+    padding:10px 22px;
+    border-radius:25px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.admin-btn:hover{
+    background-color:#1565c0;
+    color:white;
+}
+</style>
+<body>
+<div class="header">
+<img src="m.png" alt="website logo" class="logo">
+<h1 class="Donate">Blood Donation</h1>
+<nav class="navigation">
+<a href="home.html">Home</a>
+<a href="about.html">About</a>
+<a href="donate.html">Donate</a>
+<a href="findblood.html">Find Blood</a>
+<a href="camps.html">Camps</a>
+<a href="contact.html">Contact</a>
+<button class="admin-btn" onclick="window.location.href='admin.html'">Admin</button>
+</nav> 
+</div>
+<h2 align="center">DONOR REGISTRATION FORM</h2>
+<script>
+function validateDates() {
+    let lastDonationDate = document.getElementById("last_donation_date").value;
+    let donationDate = document.getElementById("donation_date").value;
+
+    if (new Date(lastDonationDate) > new Date(donationDate)) {
+        alert("Last Donation Date must be earlier than Donation Date.");
+        return false;
+    }
+    return true;
+}
+</script>
+<form onsubmit="return validateDates()" method="POST" action="register.php">
+<table align="" cellpadding="25" cellspacing="0" border="1">
+<tr>
+<td>
+<b> FULL NAME:</b></td>
+<td><input type="text" name="full_name" pattern="[A-Za-z ]+" title="Name should contain letters and space is allowed between words" required></td>
+</tr>
+<tr>
+<td>
+<b>AGE:</b></td>
+<td><input type="text" name="age" pattern="^(1[89]|[2-5][0-9]|6[0-5])$"  title="Age must be between 18 and 65" required>
+</td>
+</tr>
+<tr>
+<td>
+<b>GENDER:</b></td>
+<td>
+<input type="radio" name="gender" value="Male" required>Male
+<input type="radio" name="gender" value="Female" required>Female
+<input type="radio" name="gender" value="Other" required>Other 
+</td>
+</tr>
+<tr>
+<td>
+<b>BLOOD GROUP:</b></td>
+<td>
+<select name="blood_group" required>
+<option value="" selected disabled hidden>Select BloodGroup</option>
+<option>A+</option>
+<option>A-</option>
+<option>B+</option>
+<option>B-</option>
+<option>O+</option>
+<option>O-</option>
+<option>AB+</option>
+<option>AB-</option>
+</select>
+</td>
+</tr>
+<tr>
+<td >
+<b>MOBILE NUMBER:</b></td>
+<td><input type="tel" name="mobile_number" pattern="[6-9]{1}[0-9]{9}" maxlength="10" title="Please enter a valid 10-digit mobile number" required></td>
+</tr>
+<tr>
+<td>
+<b>CITY:</b></td>
+<td><input type="text" name="city" pattern="[A-Za-z ]+" title=" City name  should contain letters and space is allowed between words" required></td>
+</tr>
+<tr>
+<td>
+<b>STATE:</b></td>
+<td><input type="text" name="state" pattern="[A-Za-z ]+" title="State name  should contain letters and space is allowed between words" required></td>
+</tr>
+<tr>
+<td>
+<b>LAST DONATION DATE:</b></td>
+<td><input type="date" id="last_donation_date" name="last_donation_date"></td>
+</tr>
+<tr>
+<td>
+<b>REGISTRATION DATE:</b></td>
+<td><input type="date" id="donation_date" name="donation_date" readonly>
+</td>
+</tr>
+<script>
+document.getElementById("donation_date").value=new Date().toISOString().split('T')[0];
+</script>
+<tr>
+<td>
+<b>BLOOD DONATION CAMP</b>
+</td>
+<td>
+<select name="camp_name" id="camp_name">
+<option value="">--Select Camp (Optional)--</option>
+<option value="Red Cross Mega Camp">Red Cross Mega Camp</option>
+ <option value="Government Hospital Camp">Government Hospital Camp</option>
+  <option value="College Blood Camp">College Blood Camp</option>
+</select>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center" >
+<input type="submit"  class="reg" value="Register">
+</td>
+</tr>
+</table>
+</form>
+<a href="home.html">
+<button class="back-btn" style="font-size :18px">Back to Home</button>
+</a>
+</body>
+</html>

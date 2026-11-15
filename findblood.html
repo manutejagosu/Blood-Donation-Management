@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Find Blood</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<style>
+.Donate{
+font-size:38px;
+}
+h2{
+font-size:35px;
+margin-top:25px;
+color:#8b0000;
+}
+p{
+font-family:'Trebuchet MS',sans-serif;
+margin-top:20px;
+text-align:center;
+}
+body{
+background-image:url('blood.jpg');
+background-size:cover;
+background-repeat:no-repeat;
+}
+table{
+    margin:40px auto;
+    background: rgba(255,255,255,0.9);
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0px 8px 20px rgba(0,0,0,0.3);
+    border-collapse: collapse;
+}
+
+th{
+    font-size:28px;
+    color:#c62828;
+    padding-bottom:15px;
+}
+
+td{
+    font-weight:bold;
+    padding:10px;
+    font-size:16px;
+}
+input, select{
+    width:200px;
+    padding:8px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    outline:none;
+}
+input:focus, select:focus{
+    border:1px solid #2196F3;
+    box-shadow:0 0 5px #2196F3;
+}
+button{
+    background:#2196F3;
+    color:white;
+    padding:10px 25px;
+    border:none;
+    border-radius:25px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+button:hover{
+    background:#0d47a1;
+    transform:scale(1.05);
+}
+.admin-btn{
+background:white;
+    border:none;
+     color:red;
+     font-size:20px;
+margin-left:25px;
+    padding:10px 22px;
+    border-radius:25px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.admin-btn:hover{
+    background-color:#1565c0;
+    color:white;
+}
+</style>
+<body>
+<div class="header">
+<img src="m.png" alt="website logo" class="logo">
+<h1 class="Donate">Blood Donation</h1>
+<nav class="navigation">
+<a href="home.html">Home</a>
+<a href="about.html">About</a>
+<a href="donate.html">Donate</a>
+<a href="findblood.html">Find Blood</a>
+<a href="camps.html">Camps</a>
+<a href="contact.html">Contact</a>
+<button class="admin-btn" onclick="window.location.href='admin.html'">Admin</button>
+</nav> 
+</div>
+<h2 align="center">Find Blood</h2>
+<p>
+Select the required blood group and location to find available donors.
+</p>
+<form method="POST" action="search.php">
+<table  align="center" border="1" >
+<tr>
+<td>BLOOD GROUP:</td>
+<td>
+<select name="blood_group" required>
+<option value="" selected disabled hidden>Select BloodGroup</option>
+<option>A+</option>
+<option>A-</option>
+<option>B+</option>
+<option>B-</option>
+<option>O+</option>
+<option>O-</option>
+<option>AB+</option>
+<option>AB-</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>UNITS NEEDED:</td>
+<td>
+<input type="number" name="units"  placeholder="Enter Units required" required>
+</td>
+</tr>
+<tr>
+<td>REQUIRED DATE:</td>
+<td>
+<input type="date" name="required_date" required>
+</td>
+</tr>
+<tr>
+<td>CITY:</td>
+<td>
+<input type="text" name="city" pattern="[A-Za-z ]+" placeholder="Enter City Name" required>
+</td>
+</tr>
+<tr>
+<td>STATE:</td>
+<td>
+<input type="text" name="state" pattern="[A-Za-z ]+" placeholder="Enter State Name"required>
+</td>
+</tr>
+<tr>
+<td>MOBILE NUMBER:</td>
+<td> 
+<input type="tel" name="mobile_number" pattern="[6-9]{1}[0-9]{9}"  maxlength="10" placeholder="Enter Mobile Number" required>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<button type="submit">Search</button>
+</td>
+</tr>
+</table>
+</form>
+<a href="home.html">
+<button class="back-btn" style="font-size :18px;  margin-left:595px;">Back to Home</button>
+</a>
+</body>
+</html>

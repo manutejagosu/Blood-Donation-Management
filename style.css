@@ -1,0 +1,73 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+.header{
+position:relative;
+top:0;
+left:0;
+width:100%;
+padding:3px 40px;
+background:red;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.logo{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid black;
+}
+.hero{
+height:100vh;
+background-image:url('bl.jpg');
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+display:relative;
+justify-content:center;
+align-items:bottom;
+}
+.Donate{
+margin-left:10px;
+margin-right:20px;
+letter-spacing:-1px;
+color:white;
+user-select:none;
+text-shadow:2px  2px  4px  rgba(0,0,0,0.3);
+white-space:nowrap;
+}
+.navigation a{
+position:relative;
+font-size:1.1em;
+color:white;
+text-decoration:none;
+font-weight:500;
+margin-left:40px;
+}
+.navigation a:hover{
+text-decoration:underline;
+}
+.admin-btn{
+    border:none;
+     color:red;
+     font-size:20px;
+    padding:10px 22px;
+    border-radius:25px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.admin-btn:hover{
+    background-color:#1565c0;
+    color:white;
+}
+
+
+

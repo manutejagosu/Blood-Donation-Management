@@ -10,6 +10,45 @@
 .Donate{
 font-size:38px;
 }
+     @media screen and (max-width: 768px) {
+
+    body {
+        min-height: 100vh;
+        background-size: 100% 100%;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        gap: 10px;
+        margin: 30px 8px;
+    }
+
+    .card {
+        width: 33.33%;
+        min-width: 0;
+        padding: 15px 5px;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 11px;
+    }
+
+    .back-btn {
+        font-size: 11px !important;
+        padding: 7px 5px;
+    }
+}
 h2{
 margin-top:30px;
 margin-left:50px;
@@ -29,7 +68,7 @@ margin-left:390px;
 font-size:25px;
 text-align:center;
 }
-.cards{
+.crds{
 display:flex;
 justify-content:center;
 gap:30px;
@@ -46,7 +85,7 @@ li{
 font-family:'Trebuchet MS',sans-serif;
 text-align:center;
 }
-.card{
+.crd{
 background:linear-gradient(to right,#B71c1c,#E53935);
 color:white;
 padding:50px;
@@ -54,7 +93,7 @@ width:400px;
 border-radius:45px;
 text-align:center;
 }
-.card:hover{
+.crd:hover{
 transform:translateY(-17px);
 }
 h3{
@@ -77,11 +116,11 @@ border-radius:25px;
 cursor:pointer;
 font-weight:bold;
 }
-.back-btn:hover{
+.bck-btn:hover{
 background:linear-gradient(45deg,#2563eb,#1e40af);
 color:white;
 }
-body{
+bdy{
 height:140vh;
 font-family:'Trebuchet MS',sans-serif;
 background-image:url('blood.jpg');
